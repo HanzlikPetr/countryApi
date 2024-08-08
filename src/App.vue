@@ -1,20 +1,13 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import {RouterView } from 'vue-router'
+import NavBar from './components/NavBar.vue';
 </script>
 
 <template>
   <header>
-
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/"><h1>Where is the wordl?</h1></RouterLink>
-      </nav>
-    </div>
+    <NavBar />
   </header>
 
   <RouterView />
 </template>
 
-<style scoped>
-
-</style>
