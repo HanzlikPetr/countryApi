@@ -2,7 +2,7 @@
 import { onMounted, reactive, ref } from 'vue';
 import axios from 'axios';
 import CountryComponent from '@/components/CountryComponent.vue';
-import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+import LoadingAnimation from '@/components/LoadingAnimation.vue';
 
 const searchCountry = ref('')
 const region = ref('Filter by region')
@@ -80,7 +80,7 @@ onMounted(async () => {
         <button v-if="(limit + 1) * 8 < state.countries.length" @click="moreCountries">More countries</button>
       </div>
     </div>
-    <PulseLoader v-else/>
+    <LoadingAnimation v-else/>
     
   </main>
 </template>
@@ -131,7 +131,7 @@ onMounted(async () => {
     width: 60%;
     display: flex;
     justify-content: space-between;
-    margin-left: -5%;
+    margin: auto;
   }
 
   .alone{

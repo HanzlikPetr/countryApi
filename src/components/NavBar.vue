@@ -1,26 +1,15 @@
-<script setup>
-import { RouterLink } from 'vue-router'
-
-</script>
-
 <template>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/" class="linkHome"><h1>Where is the wordl?</h1></RouterLink>
+        <h1>Where is the wordl?</h1>
       </nav>
     </div>
 </template>
 
 <style scoped>
-    .linkHome{
-        display: block;
-        text-decoration: none;
-        color: #000;
-        width: 80%;
-        margin: auto;
-        font-size: 150%;
-        padding: 1% 0;
-        
+    h1{
+      font-size: 200%;
+      padding: 1% 10%;
     }
 
     .wrapper{

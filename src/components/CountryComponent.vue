@@ -1,5 +1,5 @@
 <script setup>
-
+import { RouterLink } from 'vue-router';
 defineProps({
     country: Object
 })
@@ -8,13 +8,14 @@ defineProps({
 </script>
 
 <template>
-    <div class="country">
+    
+    <RouterLink class="country" :to="'/country/' + country.name.common">
         <img :src="country.flags.png" alt="">
         <h3>{{ country.name.common }}</h3>
         <p><span class="bold">Population: </span>{{ country.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") }}</p>
         <p><span class="bold">Region: </span>{{ country.region }}</p>
         <p><span class="bold">Capital: </span>{{ country.capital ? country.capital[0] : "" }}</p>
-    </div>
+    </RouterLink>
     
 </template>
 
@@ -27,6 +28,8 @@ defineProps({
         padding-bottom: 4%;
         margin: 5% 5% 0 0;
         cursor: pointer;
+        text-decoration: none;
+        color: #000;
     }
 
     .bold{
